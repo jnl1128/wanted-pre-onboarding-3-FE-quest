@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const TopNavigator = ({ authenticated }) => {
+const TopNavigator = ({ authenticated, logout }) => {
     return (
         <>
             <header style={{ display: "flex", padding: "20px 40px" }}>
@@ -11,7 +11,7 @@ const TopNavigator = ({ authenticated }) => {
                         로그인
                     </Link>
                 ) : (
-                    <p href="#" style={{ flex: "1", textDecoration: "none", color: "black" }}>
+                    <p href="#" onClick={logout} style={{ flex: "1", textDecoration: "none", color: "black" }}>
                         로그아웃
                     </p>
                 )}
